@@ -28,7 +28,7 @@ import Tasks from '../Tasks'
 const CreateTask = props => {
   const {tagsList} = props
   const [task, setTaskFn] = useState('')
-  const [option, setOptionFn] = useState(tagsList[0].optionId || '')
+  const [option, setOptionFn] = useState(tagsList[0].optionId)
   const [taskList, setTaskListFn] = useState([])
   const [activeTag, setActiveTagFn] = useState(null)
 
@@ -47,10 +47,12 @@ const CreateTask = props => {
       task,
       option,
     }
-    setTaskListFn(prevTaskList => [...prevTaskList, taskDetails])
-    setTaskFn('')
-    setOptionFn(tagsList[0].optionId || '')
-    setActiveTagFn(null)
+    if (taskDetails.task !== '') {
+      setTaskListFn(prevTaskList => [...prevTaskList, taskDetails])
+      setTaskFn('')
+      setOptionFn(tagsList[0].optionId)
+      setActiveTagFn(null)
+    }
   }
 
   const onTagClick = tag => {
