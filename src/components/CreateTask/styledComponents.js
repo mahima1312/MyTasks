@@ -20,7 +20,8 @@ export const Heading = styled.h1`
 `
 
 export const FormContainer = styled.form`
-width:100%;`
+  width: 100%;
+`
 
 export const InputContainer = styled.div`
   display: flex;
@@ -29,7 +30,6 @@ export const InputContainer = styled.div`
   width: 100%;
   margin-top: 20px;
   margin-bottom: 20px;
- 
 `
 
 export const Label = styled.label`
@@ -47,21 +47,22 @@ export const Input = styled.input`
   padding-left: 10px;
   font-weight: 500;
   font-size: 15px;
-   outline:none;
+  outline: none;
 `
 
 export const Select = styled.select`
   width: 100%;
   height: 40px;
-  outline:none;
-  cursor:pointer;
+  outline: none;
+  cursor: pointer;
 `
 
 export const Option = styled.option`
-color:#1a171d;
-padding:10px;
-font-size:18px;
-font-weight:bold;`
+  color: #1a171d;
+  padding: 10px;
+  font-size: 18px;
+  font-weight: bold;
+`
 
 export const AddBtn = styled.button`
   margin-top: 20px;
@@ -79,35 +80,37 @@ export const AddBtn = styled.button`
 
 export const TaskAddContainer = styled.div`
   background-color: #000000;
-  padding:20px;
+  padding: 20px;
   width: 60%;
 `
 
 export const TagsHeading = styled.h1`
-color:#ffffff;
-padding-top:30px;
+  color: #ffffff;
+  padding-top: 30px;
 `
 export const TagListContainer = styled.ul`
-list-style-type:none;
-padding-left:0px;
-display:flex;
+  list-style-type: none;
+  padding-left: 0px;
+  display: flex;
 `
 
 export const TaskHeading = styled(TagsHeading)``
 
 export const TasksContainer = styled.ul`
-list-style-type:none;
-padding-left:0;`
+  list-style-type: none;
+  padding-left: 0;
+`
 
 export const NoTaskContainer = styled.div`
-height:50vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;`
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
 
 export const NoTaskText = styled.p`
-color: #ffffff;
-font-size:30px;
-font-weight:bold;
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: bold;
 `

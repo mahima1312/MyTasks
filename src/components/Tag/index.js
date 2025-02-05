@@ -5,7 +5,7 @@ const Tag = props => {
   const {optionId, displayText} = tagDetails
 
   const onClickTag = () => {
-    onTagClick(optionId)
+    onTagClick(displayText)
   }
 
   return (

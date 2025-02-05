@@ -28,7 +28,7 @@ import Tasks from '../Tasks'
 const CreateTask = props => {
   const {tagsList} = props
   const [task, setTaskFn] = useState('')
-  const [option, setOptionFn] = useState(tagsList[0].optionId)
+  const [option, setOptionFn] = useState(tagsList[0].displayText)
   const [taskList, setTaskListFn] = useState([])
   const [activeTag, setActiveTagFn] = useState(null)
 
@@ -50,7 +50,7 @@ const CreateTask = props => {
     if (taskDetails.task !== '') {
       setTaskListFn(prevTaskList => [...prevTaskList, taskDetails])
       setTaskFn('')
-      setOptionFn(tagsList[0].optionId)
+      setOptionFn(tagsList[0].displayText)
       setActiveTagFn(null)
     }
   }
@@ -84,7 +84,10 @@ const CreateTask = props => {
             <Label htmlFor="tags">Tags</Label>
             <Select id="tags" value={option} onChange={onChangeOption}>
               {tagsList.map(eachOption => (
-                <Option value={eachOption.optionId} key={eachOption.optionId}>
+                <Option
+                  value={eachOption.displayText}
+                  key={eachOption.optionId}
+                >
                   {eachOption.displayText}
                 </Option>
               ))}
@@ -100,7 +103,7 @@ const CreateTask = props => {
             <Tag
               key={eachTag.optionId}
               tagDetails={eachTag}
-              isActive={activeTag === eachTag.optionId}
+              isActive={activeTag === eachTag.displayText}
               onTagClick={onTagClick}
             />
           ))}
